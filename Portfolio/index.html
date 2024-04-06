@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/319f2642c0.js" crossorigin="anonymous"></script>
+    <title>Portfolio Johan</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo2.png" class="logo" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Jr Frontend</p>
+                <h1>Hola! soy <span>Johan</span> <br>y vivo en Venezuela</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!---------------------------about------------->
+    <div id="about">
+        <div class="containt">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/procesando.jpeg" alt="PNG user">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre mi</h1>
+                    <p>Soy un joven integral y proactivo con una amplia experiencia laboral en diversos campos. He desempeñado roles desde soporte técnico en redes y atención al cliente hasta la reparación de equipos electrónicos y la coordinación de ventas. Mis habilidades se centran en la comunicación efectiva, trabajo en equipo y resolución de conflictos. Actualmente, estoy cursando mi primer año de Informática en la universidad y adquiriendo conocimientos en HTML, CSS, JavaScript, Flutter y bases de datos. Además, tengo conocimientos en Blockchain y me mantengo al tanto de los proyectos en la Web 3.0.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Jr</span><br>Desarrollo Web</li>
+                            <li><span>Redes</span><br>Mikrotik, Ubiquiti, Cyberseguridad?</li>
+                           <!-- <li><span>App Development Jr</span><br>Equipos Android /iOS</li>-->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024</span><br>En progreso</li>
+                        </ul>
+                </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016-2019</span><br>PNF en Electronica en IUTFRP</li>
+                            <li><span>2019-2019</span><br>PNF en Informatica en UPTAMPCA</li>
+                            <li><span>2022-Progreso</span><br>PNF en Informatica en UNETRANS</li>
+                            <li><span>2023</span><br>Desarrollo web por FREECODECAMP</li>
+                        </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------services---------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Mis Servicios</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Diseño Web</h2>
+                    <p>Aqui pongo la descripcion del servicio </p>
+                    <a href="#">Ver mas</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Cyberseguridad</h2>
+                    <p>Redes, Mikrotik y demas </p>
+                    <a href="#">Ver mas</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>Si lo puedes pensar se puede crear</h2>
+                    <p>Aqui pongo la descripcion del servicio </p>
+                    <a href="#">Ver mas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------portfolio------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Mis Trabajos</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="Trabajo 1">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Aqui se pone la descripcion del poryecto </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="Trabajo 2">
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="Trabajo 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks ){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents ){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
